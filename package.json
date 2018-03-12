@@ -1,0 +1,34 @@
+{
+  "name": "react-material-timeline",
+  "version": "1.0.0",
+  "description": "Timeline component basing on material-ui",
+  "main": "index.js",
+  "repository": "git@github.com:SirWojtek/react-material-timeline.git",
+  "author": "Mateusz <mat@citrusad.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "webpack && webpack-dev-server"
+  },
+  "dependencies": {
+    "material-ui": "^1.0.0-beta.34",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.0",
+    "html-webpack-include-assets-plugin": "^1.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-react-root-plugin": "^0.9.0",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.7.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}

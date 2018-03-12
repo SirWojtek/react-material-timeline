@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": "src",
+    "sourceMap": true,
+    "outDir": "ts-build",
+    "jsx": "preserve",
+    "strictNullChecks": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
