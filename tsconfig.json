@@ -6,7 +6,7 @@
     "baseUrl": "src",
     "sourceMap": true,
     "outDir": "ts-build",
-    "jsx": "preserve",
+    "jsx": "react",
     "strictNullChecks": true
   },
   "exclude": [
