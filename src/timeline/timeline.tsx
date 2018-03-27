@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Card, Grid, Icon, Typography } from 'material-ui';
 import { CardHeader, CardContent } from 'material-ui/Card';
 import {
-  WithTheme, withStyles, WithStyles, StyleRulesCallback
+  WithTheme, withStyles, WithStyles, StyleRulesCallback, StyledComponentProps
 } from 'material-ui/styles';
 
 type ClassNames = 'container'
@@ -63,7 +63,7 @@ export interface IEvent {
   icon: JSX.Element;
 }
 
-interface IProps {
+export interface IProps {
   events: IEvent[];
 };
 

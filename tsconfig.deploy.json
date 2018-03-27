@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
     "baseUrl": "src",
     "sourceMap": true,
-    "outDir": "ts-build",
+    "declaration": true,
+    "outDir": "deploy/lib",
     "jsx": "react",
-    "strictNullChecks": true
+    "lib": [ "es2015", "dom" ]
   },
   "exclude": [
-    "node_modules", "deploy"
+    "node_modules", "deploy", "demo"
   ]
 }

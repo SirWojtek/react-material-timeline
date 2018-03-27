@@ -8,7 +8,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "webpack && webpack-dev-server"
+    "start": "webpack && webpack-dev-server",
+    "build": "yarn build:es5 && yarn build:es6",
+    "build:es5": "tsc -p tsconfig.deploy.json",
+    "build:es6": "tsc -p tsconfig.deploy.json -m es6 --outDir deploy/lib-esm"
   },
   "dependencies": {
     "material-ui": "^1.0.0-beta.34",
