@@ -4,9 +4,6 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "baseUrl": "src",
-    "sourceMap": true,
-    "declaration": true,
-    "outDir": "deploy/lib",
     "jsx": "react",
     "lib": [ "es2015", "dom" ]
   },
