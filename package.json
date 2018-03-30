@@ -2,18 +2,32 @@
   "name": "react-material-timeline",
   "version": "1.0.0",
   "description": "Timeline component basing on material-ui",
-  "main": "index.js",
+  "main": "deploy/lib/index.js",
   "repository": "git@github.com:SirWojtek/react-material-timeline.git",
-  "author": "Mateusz <mat@citrusad.com>",
+  "contributors": [
+    {
+      "name": "SirWojtek",
+      "email": "momatoku@gmail.com"
+    },
+    {
+      "name": "rungokarol",
+      "email": "karolrungo@gmail.com"
+    }
+  ],
   "license": "MIT",
   "private": false,
   "scripts": {
     "start": "webpack && webpack-dev-server",
-    "build": "rm -fr deploy && yarn build:es5 && yarn build:es6 && yarn build:umd",
-    "build:es5": "tsc -p tsconfig.deploy.json -m commonjs --outDir deploy/lib -d --sourceMap",
-    "build:es6": "tsc -p tsconfig.deploy.json -m es6 --outDir deploy/lib-esm -d --sourceMap",
+    "build": "rm -fr dist && yarn build:es5 && yarn build:es6 && yarn build:umd",
+    "build:es5": "tsc -p tsconfig.deploy.json -m commonjs --outDir dist/lib -d --sourceMap",
+    "build:es6": "tsc -p tsconfig.deploy.json -m es6 --outDir dist/lib-esm -d --sourceMap",
     "build:umd": "webpack --config webpack.config.deploy.js"
   },
+  "files": [
+    "dist/_bundles",
+    "dist/lib",
+    "dist/lib-esm"
+  ],
   "dependencies": {
     "material-ui": "^1.0.0-beta.34",
     "react": "^16.2.0",

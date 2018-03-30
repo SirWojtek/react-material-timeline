@@ -9,7 +9,7 @@ module.exports = {
     'react-material-timeline.min': './src/index.ts',
   },
   output: {
-    path: path.resolve('deploy/_bundles'),
+    path: path.resolve('dist/_bundles'),
     filename: '[name].js',
     libraryTarget: 'umd',
     library: 'react-material-timeline',
