@@ -18,6 +18,7 @@
   "private": false,
   "scripts": {
     "start": "rm -fr dist && webpack && webpack-dev-server",
+    "deploy": "yarn build && yarn publish",
     "build": "rm -fr dist && yarn build:es5 && yarn build:es6 && yarn build:umd",
     "build:es5": "tsc -p tsconfig.deploy.json -m commonjs --outDir dist/lib -d --sourceMap",
     "build:es6": "tsc -p tsconfig.deploy.json -m es6 --outDir dist/lib-esm -d --sourceMap",
