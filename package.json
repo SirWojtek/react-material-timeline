@@ -2,7 +2,7 @@
   "name": "react-material-timeline",
   "version": "1.0.0",
   "description": "Timeline component basing on material-ui",
-  "main": "deploy/lib/index.js",
+  "main": "dist/lib/index.js",
   "repository": "git@github.com:SirWojtek/react-material-timeline.git",
   "contributors": [
     {
@@ -17,7 +17,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "webpack && webpack-dev-server",
+    "start": "rm -fr dist && webpack && webpack-dev-server",
     "build": "rm -fr dist && yarn build:es5 && yarn build:es6 && yarn build:umd",
     "build:es5": "tsc -p tsconfig.deploy.json -m commonjs --outDir dist/lib -d --sourceMap",
     "build:es6": "tsc -p tsconfig.deploy.json -m es6 --outDir dist/lib-esm -d --sourceMap",
