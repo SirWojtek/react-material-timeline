@@ -71,6 +71,9 @@ class Timeline extends React.Component<IProps & WithStyles<ClassNames>> {
   constructor(props: any) {
     super(props);
 
+    if (!this.props.events) {
+      throw new Error('Please provide \'events\' as an input. For more help see docs.');
+    }
   }
 
   render() {
