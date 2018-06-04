@@ -1,8 +1,12 @@
 {
   "name": "react-material-timeline",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Timeline component basing on material-ui",
-  "keywords": [ "timeline", "react", "material" ],
+  "keywords": [
+    "timeline",
+    "react",
+    "material"
+  ],
   "main": "dist/lib/index.js",
   "repository": "https://github.com/SirWojtek/react-material-timeline.git",
   "contributors": [
