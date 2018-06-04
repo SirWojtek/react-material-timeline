@@ -14,9 +14,9 @@ If you are looking for elegant, simple library to show time based event, this is
 
 ## Instalation
 ### Prerequisites
-`react-material-timeline` uses `material-ui-next` library.
+`react-material-timeline` uses `material-ui` library.
 It means you should have configured `material-ui` before you start.
-For more information look here: https://material-ui-next.com/getting-started/installation/
+For more information look here: https://material-ui.com/getting-started/installation/
 
 ### Install package
 ```
@@ -35,7 +35,7 @@ npm install react-material-timeline
 
 ```
 import Timeline from 'react-material-timeline';
-import { Avatar, Icon } from 'material-ui';
+import { Avatar, Icon } from '@material-ui/core';
 
 const icon =
 
