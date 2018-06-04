@@ -11,6 +11,9 @@ If you are looking for elegant, simple library to show time based event, this is
 * lightweight and simple
 * optional Typescript mappings
 
+## Demo
+
+https://react-material-timeline.stackblitz.io
 
 ## Instalation
 ### Prerequisites
