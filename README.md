@@ -2,7 +2,7 @@
 
 `react-material-timeline` is a vertical (right now!) timeline component which can be summarized with a simple equation:
 ```
-react-material-timeline = react + material-ui + some code
+react-material-timeline = react + material-ui + the code
 ```
 If you are looking for elegant, simple library to show time based event, this is the perfect candidate!
 
@@ -20,11 +20,11 @@ For more information look here: https://material-ui-next.com/getting-started/ins
 
 ### Install package
 ```
-yarn add -s react-material-timeline`
+yarn add react-material-timeline
 ```
 or
 ```
-npm install -s react-material-timeline
+npm install react-material-timeline
 ```
 
 ## Usage

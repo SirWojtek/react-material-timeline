@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { Card, Grid, Icon, Typography } from 'material-ui';
-import { CardHeader, CardContent } from 'material-ui/Card';
 import {
+  CardHeader, CardContent,
+  Card, Grid, Icon, Typography,
   WithTheme, withStyles, WithStyles, StyleRulesCallback, StyledComponentProps
-} from 'material-ui/styles';
+} from '@material-ui/core';
 
 type ClassNames = 'container'
   | 'iconGrid' | 'iconContainer' | 'line'

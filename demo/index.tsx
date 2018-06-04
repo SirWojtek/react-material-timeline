@@ -1,9 +1,11 @@
 import { render } from 'react-dom';
 import * as React from 'react';
 
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import { Avatar, Icon } from 'material-ui';
-import { blue, pink } from 'material-ui/colors';
+import {
+  MuiThemeProvider, createMuiTheme,
+  Avatar, Icon,
+} from '@material-ui/core';
+import { blue, pink } from '@material-ui/core/colors';
 
 import Timeline, { IEvent } from '../src/timeline/timeline';
 
