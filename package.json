@@ -2,6 +2,7 @@
   "name": "react-material-timeline",
   "version": "1.1.0",
   "description": "Timeline component basing on material-ui",
+  "keywords": [ "timeline", "react", "material" ],
   "main": "dist/lib/index.js",
   "repository": "https://github.com/SirWojtek/react-material-timeline.git",
   "contributors": [
@@ -29,7 +30,7 @@
     "dist/lib",
     "dist/lib-esm"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "@material-ui/core": "^1.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
