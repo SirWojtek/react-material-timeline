@@ -67,7 +67,7 @@ export interface IProps {
   events: IEvent[];
 };
 
-class Timeline extends React.Component<IProps & WithStyles<ClassNames>> {
+class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
   constructor(props: any) {
     super(props);
 
@@ -122,4 +122,4 @@ class Timeline extends React.Component<IProps & WithStyles<ClassNames>> {
   }
 }
 
-export default withStyles(styles)<IProps>(Timeline);
+export const Timeline = withStyles(styles)<IProps>(TimelineBase);

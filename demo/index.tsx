@@ -7,7 +7,7 @@ import {
 } from '@material-ui/core';
 import { blue, pink } from '@material-ui/core/colors';
 
-import Timeline, { IEvent } from '../src/timeline/timeline';
+import { Timeline, IEvent } from '../src/timeline/timeline';
 
 const theme = createMuiTheme({
   palette: {
