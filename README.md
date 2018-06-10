@@ -37,7 +37,7 @@ npm install react-material-timeline
 4. Have fun.
 
 ```
-import Timeline from 'react-material-timeline';
+import { Timeline } from 'react-material-timeline';
 import { Avatar, Icon } from '@material-ui/core';
 
 const icon =
