@@ -44,14 +44,14 @@ const icon =
 
 const events = [
   {
-    time: new Date(),
     title: 'Event 1',
+    subheader: new Date().toString(),
     description: [ 'Some description for event 1' ],
     icon: <Avatar><Icon>work</Icon></Avatar>,
   },
   {
-    time: new Date(),
     title: 'Event 2',
+    subheader: new Date().toString(),
     description: [ 'Some description for event 2' ],
     icon: <Avatar><Icon>home</Icon></Avatar>,
   }

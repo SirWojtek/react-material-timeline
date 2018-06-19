@@ -112,7 +112,7 @@ class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
         <div className={isLeft ?
           classes.cardDecoratorLeft : classes.cardDecoratorRight}/>
         <Card>
-          <CardHeader title={event.title}/>
+          <CardHeader title={event.title} subheader={event.subheader}/>
           <CardContent>
             { event.description }
           </CardContent>
