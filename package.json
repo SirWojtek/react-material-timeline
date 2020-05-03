@@ -40,6 +40,9 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@material-ui/core": "^1.2.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "@types/react": "^16.0.38",
     "@types/react-dom": "^16.0.4",
     "babel-core": "^6.26.0",
