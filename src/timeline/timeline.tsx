@@ -66,8 +66,8 @@ export interface IEvent {
 }
 
 export interface IStyles {
-  leftCard?: Properties;
-  rightCard?: Properties;
+  leftCard?: React.CSSProperties;
+  rightCard?: React.CSSProperties;
 }
 
 export interface IProps {
