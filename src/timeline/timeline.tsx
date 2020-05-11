@@ -1,15 +1,16 @@
 import * as React from 'react';
-import {
-  CardHeader, CardContent,
-  Card, Grid, Icon, Typography,
-  WithTheme, withStyles, WithStyles, StyleRulesCallback, StyledComponentProps
-} from '@material-ui/core';
+import { CardHeader, CardContent, Card, Grid, withStyles, WithStyles, createStyles, Theme } from '@material-ui/core';
 
-type ClassNames = 'container'
-  | 'iconGrid' | 'iconContainer' | 'line'
-  | 'cardContainer' | 'cardDecoratorLeft' | 'cardDecoratorRight';
+type ClassNames =
+  | 'container'
+  | 'iconGrid'
+  | 'iconContainer'
+  | 'line'
+  | 'cardContainer'
+  | 'cardDecoratorLeft'
+  | 'cardDecoratorRight';
 
-const styles: StyleRulesCallback<ClassNames> = theme => ({
+const styles = createStyles((theme: Theme) => ({
   container: {
     width: '100%',
     height: '100%',
@@ -19,7 +20,7 @@ const styles: StyleRulesCallback<ClassNames> = theme => ({
     position: 'relative',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   iconContainer: {
     zIndex: 0,
@@ -36,25 +37,25 @@ const styles: StyleRulesCallback<ClassNames> = theme => ({
   },
   cardDecoratorLeft: {
     position: 'absolute',
-	width: 0,
-	height: 0,
-	borderTop: '16px solid transparent',
-	borderLeft: '16px solid' + theme.palette.grey.A100,
-	borderBottom: '16px solid transparent',
+    width: 0,
+    height: 0,
+    borderTop: '16px solid transparent',
+    borderLeft: '16px solid' + theme.palette.grey.A100,
+    borderBottom: '16px solid transparent',
     top: 'calc(50% - 16px)',
     left: '100%',
   },
   cardDecoratorRight: {
     position: 'absolute',
-	width: 0,
-	height: 0,
-	borderTop: '16px solid transparent',
-	borderRight: '16px solid' + theme.palette.grey.A100,
-	borderBottom: '16px solid transparent',
+    width: 0,
+    height: 0,
+    borderTop: '16px solid transparent',
+    borderRight: '16px solid' + theme.palette.grey.A100,
+    borderBottom: '16px solid transparent',
     top: 'calc(50% - 16px)',
     right: '100%',
-  }
-});
+  },
+}));
 
 export interface IEvent {
   title?: string | JSX.Element;
@@ -65,43 +66,37 @@ export interface IEvent {
 
 export interface IProps {
   events: IEvent[];
-};
+}
 
 class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
   constructor(props: any) {
     super(props);
 
     if (!this.props.events) {
-      throw new Error('Please provide \'events\' as an input. For more help see docs.');
+      throw new Error("Please provide 'events' as an input. For more help see docs.");
     }
   }
 
   render() {
-    const classes = this.props.classes;
-
-    return (
-      <Grid container>
-        { this.getRows() }
-      </Grid>
-    );
+    return <Grid container>{this.getRows()}</Grid>;
   }
 
   private getRows(): JSX.Element[] {
     const classes = this.props.classes;
-    return this.props.events.map((event, i) => ([
+    return this.props.events
+      .map((event, i) => [
         <Grid item xs={5} key={'left-' + i}>
-          { i % 2 === 0 && this.getTimelineElement(event, true) }
+          {i % 2 === 0 && this.getTimelineElement(event, true)}
         </Grid>,
         <Grid item xs={2} key={'icon-' + i} className={classes.iconGrid}>
-          <div className={classes.line}/>
-          <div className={classes.iconContainer}>
-            { event.icon }
-          </div>
+          <div className={classes.line} />
+          <div className={classes.iconContainer}>{event.icon}</div>
         </Grid>,
         <Grid item xs={5} key={'right-' + i}>
-          { i % 2 !== 0 && this.getTimelineElement(event, false) }
-        </Grid>
-    ])).reduce((res, grid) => res = [ ...res, ...grid ], []);
+          {i % 2 !== 0 && this.getTimelineElement(event, false)}
+        </Grid>,
+      ])
+      .reduce((res, grid) => (res = [...res, ...grid]), []);
   }
 
   private getTimelineElement(event: IEvent, isLeft: boolean): JSX.Element {
@@ -109,17 +104,14 @@ class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
 
     return (
       <div className={classes.cardContainer}>
-        <div className={isLeft ?
-          classes.cardDecoratorLeft : classes.cardDecoratorRight}/>
+        <div className={isLeft ? classes.cardDecoratorLeft : classes.cardDecoratorRight} />
         <Card>
-          <CardHeader title={event.title} subheader={event.subheader}/>
-          <CardContent>
-            { event.description }
-          </CardContent>
+          <CardHeader title={event.title} subheader={event.subheader} />
+          <CardContent>{event.description}</CardContent>
         </Card>
       </div>
     );
   }
 }
 
-export const Timeline = withStyles(styles)<IProps>(TimelineBase);
+export const Timeline = withStyles(styles)(TimelineBase);
