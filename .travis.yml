@@ -1,0 +1,9 @@
+dist: xenial
+language: node_js
+node_js:
+  - lts/*
+cache: yarn
+install:
+  - yarn
+script:
+  - yarn build
