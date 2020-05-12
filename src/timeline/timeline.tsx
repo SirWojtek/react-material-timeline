@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CardHeader, CardContent, Card, Grid, withStyles, WithStyles, StyleRulesCallback } from '@material-ui/core';
+import { CardHeader, CardContent, Card, Grid, withStyles, WithStyles, createStyles, Theme } from '@material-ui/core';
 
 type ClassNames =
   | 'container'
