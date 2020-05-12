@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Properties } from 'csstype';
 import { CardHeader, CardContent, Card, Grid, withStyles, WithStyles, StyleRulesCallback } from '@material-ui/core';
 
 type ClassNames =
@@ -11,7 +10,7 @@ type ClassNames =
   | 'cardDecoratorLeft'
   | 'cardDecoratorRight';
 
-const styles: StyleRulesCallback<ClassNames> = (theme) => ({
+const styles = createStyles((theme: Theme) => ({
   container: {
     width: '100%',
     height: '100%',
@@ -56,7 +55,7 @@ const styles: StyleRulesCallback<ClassNames> = (theme) => ({
     top: 'calc(50% - 16px)',
     right: '100%',
   },
-});
+}));
 
 export interface IEvent {
   title?: string | JSX.Element;
@@ -125,4 +124,4 @@ class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
   }
 }
 
-export const Timeline = withStyles(styles)<IProps>(TimelineBase);
+export const Timeline = withStyles(styles)(TimelineBase);

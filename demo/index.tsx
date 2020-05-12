@@ -1,9 +1,15 @@
-import { render } from 'react-dom';
-import * as React from 'react';
-import { MuiThemeProvider, createMuiTheme, Avatar, Icon, Divider } from '@material-ui/core';
-import { blue, pink } from '@material-ui/core/colors';
+import { render } from "react-dom";
+import * as React from "react";
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  Avatar,
+  Icon,
+  Divider,
+} from "@material-ui/core";
+import { blue, pink } from "@material-ui/core/colors";
 
-import { Timeline, IEvent } from '../src/timeline/timeline';
+import { Timeline, IEvent } from "../src/timeline/timeline";
 
 const theme = createMuiTheme({
   palette: {
@@ -20,18 +26,18 @@ const icon = (
 
 const events: IEvent[] = [
   {
-    title: 'Event 1',
-    description: ['Some description for event 1'],
+    title: "Event 1",
+    description: ["Some description for event 1"],
     icon,
   },
   {
-    title: 'Event 2',
-    description: ['Some description for event 2'],
+    title: "Event 2",
+    description: ["Some description for event 2"],
     icon,
   },
   {
-    title: 'Event 3',
-    description: ['Some description for event 3'],
+    title: "Event 3",
+    description: ["Some description for event 3"],
     icon,
   },
 ];
@@ -42,10 +48,13 @@ class Demo extends React.Component {
       <MuiThemeProvider theme={theme}>
         <Timeline events={events} />
         <Divider style={{ marginTop: 64, marginBottom: 64 }} />
-        <Timeline events={events} styles={{ rightCard: { textAlign: 'right' } }} />
+        <Timeline
+          events={events}
+          styles={{ rightCard: { textAlign: "right" } }}
+        />
       </MuiThemeProvider>
     );
   }
 }
 
-render(<Demo />, document.getElementById('root'));
+render(<Demo />, document.getElementById("root"));

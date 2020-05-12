@@ -2,7 +2,6 @@ dist: xenial
 language: node_js
 node_js:
   - lts/*
-  - node
 cache: yarn
 install:
   - yarn
