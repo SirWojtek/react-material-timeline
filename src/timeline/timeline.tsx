@@ -64,8 +64,14 @@ export interface IEvent {
   icon: JSX.Element;
 }
 
+export interface IStyles {
+  leftCard?: React.CSSProperties;
+  rightCard?: React.CSSProperties;
+}
+
 export interface IProps {
   events: IEvent[];
+  styles?: IStyles;
 }
 
 class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
@@ -101,11 +107,15 @@ class TimelineBase extends React.Component<IProps & WithStyles<ClassNames>> {
 
   private getTimelineElement(event: IEvent, isLeft: boolean): JSX.Element {
     const classes = this.props.classes;
+    const styles: IStyles = this.props.styles || {
+      leftCard: {},
+      rightCard: {},
+    };
 
     return (
       <div className={classes.cardContainer}>
         <div className={isLeft ? classes.cardDecoratorLeft : classes.cardDecoratorRight} />
-        <Card>
+        <Card style={isLeft ? styles.leftCard : styles.rightCard}>
           <CardHeader title={event.title} subheader={event.subheader} />
           <CardContent>{event.description}</CardContent>
         </Card>

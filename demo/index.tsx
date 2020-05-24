@@ -1,7 +1,6 @@
 import { render } from 'react-dom';
 import * as React from 'react';
-
-import { MuiThemeProvider, createMuiTheme, Avatar, Icon } from '@material-ui/core';
+import { MuiThemeProvider, createMuiTheme, Avatar, Icon, Divider } from '@material-ui/core';
 import { blue, pink } from '@material-ui/core/colors';
 
 import { Timeline, IEvent } from '../src/timeline/timeline';
@@ -42,6 +41,8 @@ class Demo extends React.Component {
     return (
       <MuiThemeProvider theme={theme}>
         <Timeline events={events} />
+        <Divider style={{ marginTop: 64, marginBottom: 64 }} />
+        <Timeline events={events} styles={{ rightCard: { textAlign: 'right' } }} />
       </MuiThemeProvider>
     );
   }

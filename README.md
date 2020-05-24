@@ -36,7 +36,7 @@ npm install react-material-timeline
 3. Feed `Timeline`
 4. Have fun.
 
-```
+```tsx
 import { Timeline } from 'react-material-timeline';
 import { Avatar, Icon } from '@material-ui/core';
 
@@ -63,6 +63,16 @@ class AwesomeTimeline extends Component {
   }
 }
 ```
+
+## Custtomisation
+It is possible to inject CSS styles for cards via `styles` property:
+
+```tsx
+// make text in timeline right cards to be aligned to the right
+<Timeline events={events} styles={{ rightCard: { textAlign: 'right' } }} />
+```
+
+Currently, it is possible to adjust left and right cards separatelly.
 
 ## Contributions & Feature requests
 If you have any ideas how to make this library better or you found a bug feel free to open new issue.
