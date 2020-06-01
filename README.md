@@ -40,8 +40,6 @@ npm install react-material-timeline
 import { Timeline } from 'react-material-timeline';
 import { Avatar, Icon } from '@material-ui/core';
 
-const icon =
-
 const events = [
   {
     title: 'Event 1',
